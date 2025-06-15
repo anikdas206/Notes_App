@@ -1,0 +1,198 @@
+/* Importing the 'Poppins' font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Reset margin and padding for all elements,
+   set box-sizing to border-box for easier sizing,
+   and apply the 'Poppins' font globally */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Main container styling:
+   full width, minimum full viewport height,
+   background with diagonal gradient,
+   white text color,
+   padding at top and left for spacing */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #cf9aff, #95c0ff);
+    color: #fff;
+    padding-top: 4%;
+    padding-left: 10%;
+}
+
+/* Heading inside container:
+   use flexbox to align items vertically centered,
+   larger font size and semi-bold weight */
+.container h1 {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+/* Image inside heading:
+   fixed width to keep consistent sizing */
+.container h1 img{
+    width: 60px;
+}
+
+/* Image inside buttons:
+   smaller width with right margin for spacing */
+.container button img {
+    width: 25px;
+    margin-right: 8px;
+}
+
+/* Button styling:
+   flexbox to align image and text,
+   purple gradient background,
+   white text,
+   medium font size,
+   no outline or border,
+   rounded pill shape,
+   padding for clickable area,
+   margin for spacing,
+   pointer cursor on hover,
+   smooth background transition effect */
+.container button{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#9418fd, #571094);
+    color: #fff;
+    font-size: 16px;
+    outline: 0;
+    border: 0;
+    border-radius: 40px;
+    padding: 15px 25px;
+    margin: 30px 0 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Button hover effect:
+   slightly darker gradient background on hover */
+.container button:hover {
+    background: linear-gradient(#7b0dbd, #3e066f);
+}
+
+/* Editable note box styling:
+   relative positioning for delete icon placement,
+   full width up to 500px max,
+   minimum width 150px,
+   white background with dark text for contrast,
+   padding inside for comfortable typing area,
+   margin to separate notes vertically,
+   rounded corners,
+   cursor changes to text to indicate editable */
+.input-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    min-width: 150px;
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    margin: 20px 0 ;
+    outline: none;
+    border-radius: 5px;
+    cursor: text;
+}
+
+/* Delete icon inside each note:
+   small fixed width,
+   absolutely positioned at bottom right inside note,
+   cursor changes to pointer on hover for clickability */
+.input-box img{
+    width: 25px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+/* Responsive styling for tablets and smaller screens */
+
+/* For screens 768px or smaller: */
+@media (max-width: 768px) {
+  /* Reduce left and top padding of container */
+  .container {
+    padding-left: 5%;
+    padding-top: 3%;
+  }
+  
+  /* Slightly smaller heading font size */
+  .container h1 {
+    font-size: 28px;
+  }
+  
+  /* Smaller heading image */
+  .container h1 img {
+    width: 45px;
+  }
+  
+  /* Smaller button padding and font size, slightly less rounded */
+  .container button {
+    padding: 12px 20px;
+    font-size: 14px;
+    border-radius: 35px;
+  }
+  
+  /* Smaller button icon and margin */
+  .container button img {
+    width: 20px;
+    margin-right: 6px;
+  }
+  
+  /* Make note input boxes full width, smaller padding, smaller font */
+  .input-box {
+    max-width: 100%;
+    min-width: 100%;
+    padding: 15px;
+    font-size: 14px;
+  }
+}
+
+/* Responsive styling for mobile phones */
+
+/* For screens 480px or smaller: */
+@media (max-width: 480px) {
+  /* Further reduce container padding */
+  .container {
+    padding-left: 3%;
+    padding-top: 2%;
+  }
+  
+  /* Even smaller heading font size */
+  .container h1 {
+    font-size: 22px;
+  }
+  
+  /* Smaller heading image */
+  .container h1 img {
+    width: 35px;
+  }
+  
+  /* Smaller button padding, font size, and border radius */
+  .container button {
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 30px;
+  }
+  
+  /* Smaller button icon and margin */
+  .container button img {
+    width: 18px;
+    margin-right: 5px;
+  }
+  
+  /* Smaller padding and font size in note input boxes */
+  .input-box {
+    padding: 12px;
+    font-size: 13px;
+  }
+}
